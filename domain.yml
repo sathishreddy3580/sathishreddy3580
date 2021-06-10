@@ -1,0 +1,64 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- shock:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- wow:
+    use_entities: true
+- angry:
+    use_entities: true
+- smile:
+    use_entities: true
+- cheersup:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?:::greet
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on then!
+  utter_sad:
+  - text: Sad:::fsad
+  utter_goodbye:
+  - text: Bye::Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_shock:
+  - text: Why so shocked?:::fsmile
+  utter_angry:
+  - text: Angry:::Angry
+  utter_anry:
+  - text: Narvious::Angry
+  utter_smile:
+  - text: Smile:::Smile
+  utter_wow:
+  - text: Wow:::Wow
+actions:
+- utter_angry
+- utter_anry
+forms: {}
+e2e_actions: []
